@@ -1,0 +1,16 @@
+main {
+  padding: 20px;
+}
+
+.board {
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.logo {
+  height: 548px;
+}
+
+.login-Area {
+  background-color: #3ac0a0;
+}
