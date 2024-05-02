@@ -1,0 +1,16 @@
+.leftBar {
+  background-color: #3ac0a0;
+  width: 210px;
+  height: 100vh;
+  position: relative;
+  left: 0;
+  top: 0;
+  border-right: 1px double gray;
+}
+
+.doubleBorder {
+  border-bottom-style: double;
+  border-bottom-width: 3px;
+  border-bottom-color: white;
+  margin-bottom: 0px;
+}

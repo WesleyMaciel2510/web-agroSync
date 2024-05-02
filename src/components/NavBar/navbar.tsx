@@ -1,19 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons/faLeaf";
+import "./navbar.css";
+import IconAndLabel from "../Buttons/iconAndLabel";
 
 const NavBar = () => {
   return (
-    <div className="navbar" style={{ backgroundColor: "#3AC0A0" }}>
+    <div className="navbar color">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">
-          <FontAwesomeIcon icon={faLeaf} /> Agrosync
-        </a>
+        <IconAndLabel icon={faLeaf} label={"AgroSync"} navigateTo={"/"} />
       </div>
       <div className="flex-none gap-2">
         <div className="form-control">
           <input
             type="text"
-            placeholder="Search"
+            placeholder="Buscar"
             className="input input-bordered w-24 md:w-auto"
           />
         </div>
@@ -21,7 +21,7 @@ const NavBar = () => {
           <div
             tabIndex={0}
             role="button"
-            className="btn btn-ghost btn-circle avatar"
+            className="btn btn-ghost btn-circle avatar online"
           >
             <div className="w-10 rounded-full">
               <img
@@ -36,15 +36,15 @@ const NavBar = () => {
           >
             <li>
               <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
+                Perfil
+                <span className="badge">Novo</span>
               </a>
             </li>
             <li>
-              <a>Settings</a>
+              <a>Configurações</a>
             </li>
             <li>
-              <a>Logout</a>
+              <a>Sair</a>
             </li>
           </ul>
         </div>

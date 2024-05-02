@@ -1,10 +1,10 @@
-import NavBar from "../../components/NavBar/navbar";
+import Layout from "../../components/layout";
 
 const HomePage = () => {
   return (
     <div>
-      <NavBar />
-      <h1>This is HomePage</h1>
+      <Layout />
+      <p>This is HomePage</p>
     </div>
   );
 };
