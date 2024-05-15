@@ -2,10 +2,10 @@ import React from "react";
 import Lottie from "react-lottie";
 
 interface Props {
-  animationData: string;
+  animationData?: string;
   loopingActive: boolean;
-  width?: number;
-  height?: number;
+  width?: number; //?: to make it optional
+  height?: number; //?: to make it optional
 }
 
 const LottieView: React.FC<Props> = ({

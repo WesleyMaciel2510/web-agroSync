@@ -1,5 +1,7 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { Link } from "react-router-dom";
 
 interface IconAndLabelProps {
   icon: IconDefinition;
@@ -10,7 +12,7 @@ interface IconAndLabelProps {
 const IconAndLabel: React.FC<IconAndLabelProps> = ({
   icon,
   label,
-  /* navigateTo, */
+  navigateTo,
 }) => {
   function renderContent() {
     return (
@@ -32,11 +34,11 @@ const IconAndLabel: React.FC<IconAndLabelProps> = ({
   }
   return (
     <div className="text-white">
-      {/* {navigateTo.length > 0 ? (
-        <Link href={navigateTo}>{renderContent()}</Link>
-      ) : ( */}
-      <div>{renderContent()}</div>
-      {/*  )} */}
+      {navigateTo.length > 0 ? (
+        <Link to={navigateTo}>{renderContent()}</Link>
+      ) : (
+        <div>{renderContent()}</div>
+      )}
     </div>
   );
 };

@@ -1,12 +1,15 @@
 import Layout from "../../components/layout";
 
-const HomePage = () => {
+const Home = () => {
   return (
     <div>
-      <Layout />
-      <p>This is HomePage</p>
+      <Layout>
+        <div style={{ flex: 1 }}>
+          <p>This is Home</p>
+        </div>
+      </Layout>
     </div>
   );
 };
 
-export default HomePage;
+export default Home;
