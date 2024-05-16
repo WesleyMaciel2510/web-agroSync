@@ -6,6 +6,11 @@
   padding-right: 50px;
 }
 
+.pd-5 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
 .value-show {
   font-size: 23px;
   font-weight: bold;

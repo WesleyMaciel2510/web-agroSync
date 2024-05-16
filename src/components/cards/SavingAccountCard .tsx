@@ -84,7 +84,7 @@ const SavingAccountCard = () => {
           </p>
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Digite Aqui"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             className="input input-bordered input-primary w-1/2 max-w-xs mr-3"

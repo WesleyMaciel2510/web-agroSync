@@ -2,8 +2,12 @@ import "./styles.css";
 import ImagePath from "./agro.png";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { setIsLogged } from "../../redux/actions";
+import { useDispatch } from "react-redux";
 
 const LoginPage = () => {
+  const dispatch = useDispatch();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -17,7 +21,10 @@ const LoginPage = () => {
       alert("Please fill in both username and password.");
       return;
     } else {
+      console.log("@ CREDENCIAIS VALIDAS @");
       console.log("entrou no else");
+      dispatch(setIsLogged(true));
+
       navigate("/home");
       /* onst result = await setLogin(email, password);
       console.log("@@@@ result", result);

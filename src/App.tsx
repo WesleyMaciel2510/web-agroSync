@@ -1,14 +1,19 @@
-// App.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter } from "react-router-dom";
-import AppRoutes from "./routes";
+import AppStack from "./routes";
+import { useDispatch } from "react-redux";
+import { setIsLogged } from "./redux/actions";
 
 const App: React.FC = () => {
-  const isAuthenticated = true; // This should be dynamically determined
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    const isLogged = localStorage.getItem("isLogged") === "true";
+    dispatch(setIsLogged(isLogged));
+  }, [dispatch]);
   return (
     <BrowserRouter>
-      <AppRoutes isAuthenticated={isAuthenticated} />
+      <AppStack />
     </BrowserRouter>
   );
 };

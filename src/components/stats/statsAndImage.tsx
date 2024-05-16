@@ -4,7 +4,7 @@ const StatsAndImage = () => {
   return (
     <div
       className="stats shadow"
-      style={{ minWidth: "175vh", paddingBottom: 10 }}
+      style={{ minWidth: "150vh", paddingBottom: 10, marginRight: 50 }}
     >
       <div className="stat">
         <div className="stat-figure text-primary">

@@ -144,7 +144,7 @@ const AccountPage = () => {
                 </div>
                 <input
                   type="text"
-                  placeholder="Type here"
+                  placeholder="Digite Aqui"
                   className="input input-bordered input-sm"
                   value={transferAmount}
                   style={{ width: "70px" }}

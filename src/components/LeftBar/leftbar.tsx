@@ -9,9 +9,20 @@ import {
   faRightFromBracket,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { setIsLogged } from "../../redux/actions";
 import "./leftBar.css";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const LeftBar = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogoff = () => {
+    console.log("chamou handleLogoff");
+    dispatch(setIsLogged(false));
+    navigate("/");
+  };
   return (
     <div
       className="leftBar "
@@ -60,7 +71,7 @@ const LeftBar = () => {
           <IconAndLabel
             icon={faRightFromBracket}
             label={"Sair"}
-            navigateTo={"/"}
+            action={handleLogoff}
           />
         </div>
       </div>

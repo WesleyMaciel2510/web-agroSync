@@ -7,14 +7,6 @@ import Layout from "../../components/layout";
 import "./styles.css";
 
 const MyInvestmentsPage = () => {
-  //const holdings = ["stocks", "bonds", "crypto", "realEstate", "etfs"];
-
-  //const [selectedHolding, setSelectedHolding] = useState("stocks");
-
-  /* const handleButtonClick = (holding) => {
-    setSelectedHolding(holding);
-  }; */
-
   return (
     <div>
       <Layout>
@@ -54,7 +46,7 @@ const MyInvestmentsPage = () => {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    minWidth: "160vh",
+                    /* minWidth: "160vh", */
                   }}
                 >
                   <div style={{ flex: 1, whiteSpace: "nowrap" }}>
@@ -62,14 +54,13 @@ const MyInvestmentsPage = () => {
                     <h1 className="value-show">$353.901,52</h1>
                   </div>
                   <div style={{ flex: 1, whiteSpace: "nowrap" }}>
-                    <h2 className="pd-10 blue-text">
-                      {" "}
+                    <h2 className="pd-5 blue-text">
                       Rendimento de Dividendos:{" "}
                     </h2>
                     <h1 className=" value-show center">$78.964</h1>
                   </div>
                   <div style={{ flex: 1, whiteSpace: "nowrap" }}>
-                    <h2 className="pd-10 blue-text"> Desempenho Total: </h2>
+                    <h2 className="pd-5 blue-text"> Desempenho Total: </h2>
                     <h1
                       className=" value-show center"
                       style={{ color: "green" }}
@@ -78,7 +69,7 @@ const MyInvestmentsPage = () => {
                     </h1>
                   </div>
                   <div style={{ flex: 1, whiteSpace: "nowrap" }}>
-                    <h2 className="pd-10 blue-text">Pagamento de Impostos:</h2>
+                    <h2 className="pd- blue-text">Pagamento de Impostos:</h2>
                     <h1
                       className=" value-show center"
                       style={{ color: "#c41414" }}
@@ -93,7 +84,7 @@ const MyInvestmentsPage = () => {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    minWidth: "160vh",
+                    /* minWidth: "160vh", */
                   }}
                 >
                   <div style={{ flex: 1, whiteSpace: "nowrap" }}>
@@ -101,8 +92,8 @@ const MyInvestmentsPage = () => {
                     <h1 className="value-show center">$142.104,20</h1>
                   </div>
                   <div style={{ flex: 1, whiteSpace: "nowrap" }}>
-                    <h2 className="blue-text pd-10">Títulos: </h2>
-                    <h1 className="value-show center pd-10">$3.901,52</h1>
+                    <h2 className="blue-text pd-5">Títulos: </h2>
+                    <h1 className="value-show center pd-5">$3.901,52</h1>
                   </div>
                   <div style={{ flex: 1, whiteSpace: "nowrap" }}>
                     <h2 className="blue-text" style={{ paddingLeft: 25 }}>

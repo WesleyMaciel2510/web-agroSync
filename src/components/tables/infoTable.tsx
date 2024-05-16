@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useSharedState } from "../../global/sharedStates";
 
 const TableInfo = () => {
@@ -27,6 +27,7 @@ const TableInfo = () => {
     });
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleChange = (data: any, key: any, accountIndex: number) => {
     const { value } = data.target;
     console.log("value = ", value);
@@ -41,6 +42,7 @@ const TableInfo = () => {
       return updatedAccounts;
     });
   };
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleMockChange = (data: any, key: any) => {
     const { value } = data.target;
     setMockData((prevData) => ({
@@ -111,7 +113,7 @@ const TableInfo = () => {
                 <td>
                   <input
                     type="text"
-                    placeholder="Type here"
+                    placeholder="Digite Aqui"
                     className="input input-ghost input-sm w-full max-w-"
                     value={account.accountType}
                     onChange={(data) =>
@@ -122,7 +124,7 @@ const TableInfo = () => {
                 <td>
                   <input
                     type="text"
-                    placeholder="Type here"
+                    placeholder="Digite Aqui"
                     className="input input-ghost input-sm w-full max-w-"
                     value={account.accountNumber}
                     onChange={(data) =>
@@ -133,7 +135,7 @@ const TableInfo = () => {
                 <td>
                   <input
                     type="text"
-                    placeholder="Type here"
+                    placeholder="Digite Aqui"
                     className="input input-ghost input-sm w-full max-w-"
                     value={account.bankName}
                     onChange={(data) => handleChange(data, "bankName", index)}
@@ -142,7 +144,7 @@ const TableInfo = () => {
                 <td>
                   <input
                     type="text"
-                    placeholder="Type here"
+                    placeholder="Digite Aqui"
                     className="input input-ghost input-sm w-full max-w-"
                     value={account.income}
                     onChange={(data) => handleChange(data, "income", index)}
@@ -151,7 +153,7 @@ const TableInfo = () => {
                 <td>
                   <input
                     type="text"
-                    placeholder="Type here"
+                    placeholder="Digite Aqui"
                     className="input input-ghost input-sm w-full max-w-"
                     value={account.withdraw}
                     onChange={(data) => handleChange(data, "withdraw", index)}
@@ -165,7 +167,7 @@ const TableInfo = () => {
               <td>
                 <input
                   type="text"
-                  placeholder="Type here"
+                  placeholder="Digite Aqui"
                   className="input input-ghost input-sm w-full max-w-"
                   value={mockData.accountType}
                   onChange={(data) => handleMockChange(data, "accountType")}
@@ -174,7 +176,7 @@ const TableInfo = () => {
               <td>
                 <input
                   type="text"
-                  placeholder="Type here"
+                  placeholder="Digite Aqui"
                   className="input input-ghost input-sm w-full max-w-"
                   value={mockData.accountNumber}
                   onChange={(data) => handleMockChange(data, "accountNumber")}
@@ -183,7 +185,7 @@ const TableInfo = () => {
               <td>
                 <input
                   type="text"
-                  placeholder="Type here"
+                  placeholder="Digite Aqui"
                   className="input input-ghost input-sm w-full max-w-"
                   value={mockData.bankName}
                   onChange={(data) => handleMockChange(data, "bankName")}
@@ -192,7 +194,7 @@ const TableInfo = () => {
               <td>
                 <input
                   type="text"
-                  placeholder="Type here"
+                  placeholder="Digite Aqui"
                   className="input input-ghost input-sm w-full max-w-"
                   value={mockData.income}
                   onChange={(data) => handleMockChange(data, "income")}
@@ -201,7 +203,7 @@ const TableInfo = () => {
               <td>
                 <input
                   type="text"
-                  placeholder="Type here"
+                  placeholder="Digite Aqui"
                   className="input input-ghost input-sm w-full max-w-"
                   value={mockData.withdraw}
                   onChange={(data) => handleMockChange(data, "withdraw")}

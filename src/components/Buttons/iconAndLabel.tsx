@@ -6,13 +6,15 @@ import { Link } from "react-router-dom";
 interface IconAndLabelProps {
   icon: IconDefinition;
   label: string;
-  navigateTo: string;
+  navigateTo?: string;
+  action?: () => void;
 }
 
 const IconAndLabel: React.FC<IconAndLabelProps> = ({
   icon,
   label,
   navigateTo,
+  action,
 }) => {
   function renderContent() {
     return (
@@ -32,12 +34,19 @@ const IconAndLabel: React.FC<IconAndLabelProps> = ({
       </h2>
     );
   }
+
+  const handleClick = () => {
+    if (action) {
+      action();
+    }
+  };
+
   return (
     <div className="text-white">
-      {navigateTo.length > 0 ? (
+      {navigateTo ? (
         <Link to={navigateTo}>{renderContent()}</Link>
       ) : (
-        <div>{renderContent()}</div>
+        <div onClick={handleClick}>{renderContent()}</div>
       )}
     </div>
   );

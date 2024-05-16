@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import { useSharedState } from '@/global/sharedStates'
+import React, { useState } from "react";
+import { useSharedState } from "@/global/sharedStates";
 
 interface HomeCardProps {
-  index: number
+  index: number;
 }
 
 const HomeCard: React.FC<HomeCardProps> = ({ index }) => {
-  const { accounts, setAccounts } = useSharedState()
-  const [actionType, setActionType] = useState('')
-  const [inputValue, setInputValue] = useState('')
+  const { accounts, setAccounts } = useSharedState();
+  const [actionType, setActionType] = useState("");
+  const [inputValue, setInputValue] = useState("");
 
   /*  const changeFunds = (actionType: string) => {
     const updatedAccounts = [...accounts]
@@ -41,7 +41,7 @@ const HomeCard: React.FC<HomeCardProps> = ({ index }) => {
     <div>
       <div
         className="stats bg-primary text-primary-content"
-        style={{ borderWidth: 2, borderColor: 'gray', borderRadius: 17 }}
+        style={{ borderWidth: 2, borderColor: "gray", borderRadius: 17 }}
       >
         <div className="stat">
           <div className="stat-title text-white mb-3">Account Income</div>
@@ -84,19 +84,19 @@ const HomeCard: React.FC<HomeCardProps> = ({ index }) => {
       <dialog id="modal" className="modal">
         <div
           className="modal-box"
-          style={{ borderWidth: 2, borderRadius: 20, borderColor: '#70a5f5' }}
+          style={{ borderWidth: 2, borderRadius: 20, borderColor: "#70a5f5" }}
         >
           <h3 className="font-bold text-lg text-primary">
-            {actionType === 'withdraw'
-              ? 'Withdraw funds from your account'
-              : 'Add funds to your account'}
+            {actionType === "withdraw"
+              ? "Withdraw funds from your account"
+              : "Add funds to your account"}
           </h3>
           <p className="py-4">
             Please Select the amount and click in Add Funds.
           </p>
           <input
             type="text"
-            placeholder="Type here"
+            placeholder="Digite Aqui"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             className="input input-bordered input-primary w-1/2 max-w-xs mr-3"
@@ -105,7 +105,7 @@ const HomeCard: React.FC<HomeCardProps> = ({ index }) => {
             className="btn bg-primary text-white"
             //onClick={() => changeFunds(actionType)}
           >
-            {actionType === 'withdraw' ? 'Withdraw Funds' : 'Add Funds'}
+            {actionType === "withdraw" ? "Withdraw Funds" : "Add Funds"}
           </button>
 
           <div className="modal-action">
@@ -116,7 +116,7 @@ const HomeCard: React.FC<HomeCardProps> = ({ index }) => {
         </div>
       </dialog>
     </div>
-  )
-}
+  );
+};
 
-export default HomeCard
+export default HomeCard;
