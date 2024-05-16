@@ -12,14 +12,8 @@ import Layout from "../../components/layout";
 
 const Analytics = () => {
   //const animationData = require("");
-  const [isClient, setIsClient] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedTab, setSelectedTab] = useState("tab1");
-
-  useEffect(() => {
-    setIsClient(true);
-    setTimeout(() => setIsLoading(false), 1000);
-  }, []);
 
   const handleTabChange = (event: {
     target: { id: React.SetStateAction<string> };
@@ -81,62 +75,42 @@ const Analytics = () => {
                   {/* Tab content 1 */}
                   <div style={{ display: "flex", flexDirection: "row" }}>
                     <div style={{ flex: 1 }}>
-                      {isClient &&
-                        (isLoading ? (
-                          <div className="w-1/2">
-                            <LottieView
-                              //animationData={animationData}
-                              loopingActive={false}
-                            />
-                          </div>
-                        ) : (
-                          <div>
-                            <BarChartComponent
-                              data={checkingAccountData}
-                              IncomeColor="#008080"
-                              OutcomeColor="#FFD700"
-                            />
-                            <h2
-                              style={{
-                                textAlign: "center",
-                                fontSize: 18,
-                                fontWeight: "bold",
-                                color: "#336699",
-                              }}
-                            >
-                              Conta Corrente
-                            </h2>
-                          </div>
-                        ))}
+                      <div>
+                        <BarChartComponent
+                          data={checkingAccountData}
+                          IncomeColor="#008080"
+                          OutcomeColor="#FFD700"
+                        />
+                        <h2
+                          style={{
+                            textAlign: "center",
+                            fontSize: 18,
+                            fontWeight: "bold",
+                            color: "#336699",
+                          }}
+                        >
+                          Conta Corrente
+                        </h2>
+                      </div>
                     </div>
                     <div style={{ flex: 1 }}>
-                      {isClient &&
-                        (isLoading ? (
-                          <div className="w-1/2">
-                            <LottieView
-                              //animationData={animationData}
-                              loopingActive={false}
-                            />
-                          </div>
-                        ) : (
-                          <div className="w-1/2" style={{ minWidth: "80vh" }}>
-                            <BarChartComponent
-                              data={savingAccountData}
-                              IncomeColor="#8a2be2"
-                              OutcomeColor="#3cb371"
-                            />
-                            <h2
-                              style={{
-                                textAlign: "center",
-                                fontSize: 18,
-                                fontWeight: "bold",
-                                color: "#336699",
-                              }}
-                            >
-                              Corrente Poupança
-                            </h2>
-                          </div>
-                        ))}
+                      <div className="w-1/2" style={{ minWidth: "80vh" }}>
+                        <BarChartComponent
+                          data={savingAccountData}
+                          IncomeColor="#8a2be2"
+                          OutcomeColor="#3cb371"
+                        />
+                        <h2
+                          style={{
+                            textAlign: "center",
+                            fontSize: 18,
+                            fontWeight: "bold",
+                            color: "#336699",
+                          }}
+                        >
+                          Corrente Poupança
+                        </h2>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -18,7 +18,7 @@ const Home = () => {
         <div style={{ flex: 1 }}>
           <div style={{ flex: 1, paddingTop: 15, paddingLeft: 50 }}>
             <div
-              className="hero bg-base-300"
+              className="hero bg-base-200"
               style={{
                 height: "50vh",
                 borderTopLeftRadius: 10,
@@ -42,9 +42,9 @@ const Home = () => {
                   </div>
                 </Link> */}
 
-                <div style={{ flex: 1, flexDirection: "row" }}>
+                <div style={{ flex: 1, flexDirection: "row", marginLeft: 20 }}>
                   <h1 className="text-5xl font-bold text-primary mt-10">
-                    Hello, firstName {/* {firstName} */}!
+                    Hello, User {/* {firstName} */}!
                   </h1>
                   <p className="py-6" style={{ maxWidth: "100vh" }}>
                     Provident cupiditate voluptatem et in. Quaerat fugiat ut
@@ -57,7 +57,7 @@ const Home = () => {
                 </div>
                 <div
                   className="stats stats-vertical shadow"
-                  style={{ alignSelf: "flex-start" }}
+                  style={{ alignSelf: "flex-end" }}
                 >
                   <div className="stat">
                     <div className="stat-title">New Users</div>

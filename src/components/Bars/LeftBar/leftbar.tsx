@@ -1,5 +1,5 @@
 import React from "react";
-import IconAndLabel from "../Buttons/iconAndLabel";
+import IconAndLabel from "../../Buttons/iconAndLabel";
 import {
   faHouse,
   faIdCard,
@@ -9,7 +9,7 @@ import {
   faRightFromBracket,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { setIsLogged } from "../../redux/actions";
+import { setIsLogged } from "../../../redux/actions";
 import "./leftBar.css";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
