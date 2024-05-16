@@ -71,6 +71,7 @@ const BorderedTab: React.FC<BorderedTabProps> = ({
         className="tab-content p-10 bg-tab"
         style={{
           display: selectedTab === "tab2" ? "flex" : "none",
+          width: "150vh",
         }}
       >
         {content2}
@@ -91,6 +92,7 @@ const BorderedTab: React.FC<BorderedTabProps> = ({
         className="tab-content p-10 bg-tab"
         style={{
           display: selectedTab === "tab3" ? "flex" : "none",
+          width: "150vh",
           alignContent: "space-between",
         }}
       >
@@ -111,7 +113,7 @@ const BorderedTab: React.FC<BorderedTabProps> = ({
         className="tab-content p-10 bg-tab"
         style={{
           display: selectedTab === "tab4" ? "flex" : "none",
-          width: "175vh",
+          width: "150vh",
         }}
       >
         {content4}

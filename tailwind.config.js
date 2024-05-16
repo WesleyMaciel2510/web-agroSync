@@ -2,8 +2,14 @@
 
 import daisyui from "daisyui";
 
-export const content = ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"];
-export const theme = {
-  extend: {},
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+    daisyui: {
+      themes: ["light", "dark", "cupcake"],
+      preset: "dark",
+    },
+  },
+  plugins: [daisyui],
 };
-export const plugins = [daisyui];

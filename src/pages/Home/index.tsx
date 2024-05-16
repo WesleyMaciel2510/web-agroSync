@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
-import AccountStatusCard from "../../components/cards/AccountStatusCard";
 import Layout from "../../components/layout";
-import InfoText from "../../components/infoTextBar";
 import Lottie from "react-lottie";
 
 const Home = () => {

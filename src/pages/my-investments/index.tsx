@@ -47,7 +47,7 @@ const MyInvestmentsPage = () => {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    /* minWidth: "160vh", */
+                    minWidth: "80vh",
                   }}
                 >
                   <div style={{ flex: 1, whiteSpace: "nowrap" }}>
@@ -85,7 +85,7 @@ const MyInvestmentsPage = () => {
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    /* minWidth: "160vh", */
+                    minWidth: "100vh",
                   }}
                 >
                   <div style={{ flex: 1, whiteSpace: "nowrap" }}>
