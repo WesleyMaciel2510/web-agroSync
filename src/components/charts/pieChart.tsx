@@ -1,36 +1,36 @@
-import React from 'react'
-import { PieChart, Pie, Cell, Tooltip } from 'recharts'
+import React from "react";
+import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 interface GraphData {
-  Month: string
-  Outcome?: number
-  Income?: number
+  Month: string;
+  Outcome?: number;
+  Income?: number;
 }
 
 interface PieChartComponentProps {
-  data: GraphData[]
+  data: GraphData[];
 }
 
 const COLORS = [
-  '#2196F3',
-  '#FFC107',
-  '#0edd1e',
-  '#9C27B0',
-  '#ff001e',
-  '#202b39',
-]
+  "#2196F3",
+  "#FFC107",
+  "#0edd1e",
+  "#9C27B0",
+  "#ff001e",
+  "#202b39",
+];
 
 const PieChartComponent: React.FC<PieChartComponentProps> = ({ data }) => {
-  const total = data.reduce((prev, curr) => prev + (curr.Outcome || 0), 0)
+  const total = data.reduce((prev, curr) => prev + (curr.Outcome || 0), 0);
 
   return (
     <div
       style={{
-        alignContent: 'center',
-        background: '#dcdfe9',
+        alignContent: "center",
+        background: "#f0f0f2",
         borderRadius: 30,
         borderWidth: 0.5,
-        borderColor: 'gray',
+        borderColor: "gray",
       }}
     >
       <PieChart width={400} height={200}>
@@ -52,41 +52,41 @@ const PieChartComponent: React.FC<PieChartComponentProps> = ({ data }) => {
       </PieChart>
       <div
         style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
           padding: 20,
         }}
       >
         {data.map((entry, index) => {
-          const percent = (((entry.Outcome || 0) / total) * 100).toFixed(2)
+          const percent = (((entry.Outcome || 0) / total) * 100).toFixed(2);
           return (
             <div
               key={index}
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                marginBottom: '10px',
-                width: '33%',
-                borderRadius: '5px',
+                display: "flex",
+                alignItems: "center",
+                marginBottom: "10px",
+                width: "33%",
+                borderRadius: "5px",
               }}
             >
               <div
                 style={{
-                  width: '25px',
-                  height: '20px',
+                  width: "25px",
+                  height: "20px",
                   backgroundColor: COLORS[index % COLORS.length],
-                  marginLeft: '5px',
-                  marginRight: '5px',
+                  marginLeft: "5px",
+                  marginRight: "5px",
                 }}
               />
               <div>{`${entry.Month}: ${percent}%`}</div>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PieChartComponent
+export default PieChartComponent;

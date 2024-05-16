@@ -30,6 +30,8 @@ const LeftBar = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
+        height: "100%",
+        overflowY: "auto",
       }}
     >
       <div className="doubleBorder" />

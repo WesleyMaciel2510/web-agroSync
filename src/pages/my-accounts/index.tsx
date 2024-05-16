@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { SetStateAction, useState } from "react";
 import Layout from "../../components/layout";
+import InfoText from "../../components/infoTextBar";
 
 const AccountPage = () => {
   const { accounts, setAccounts } = useSharedState();
@@ -94,6 +95,10 @@ const AccountPage = () => {
             flexDirection: "column",
           }}
         >
+          <div style={{ alignSelf: "center", paddingTop: 20 }}>
+            <InfoText />
+          </div>
+
           <div className="drawer-content flex flex-col items-center justify-center primary">
             <div
               style={{
@@ -162,6 +167,7 @@ const AccountPage = () => {
                   }}
                 />
               </div>
+
               <div style={{ flex: 3 }}>
                 <AccountCard
                   type={accounts[1].accountType}
@@ -175,11 +181,7 @@ const AccountPage = () => {
                 flexDirection: "row",
               }}
             >
-              <div
-                style={{ paddingLeft: 100, paddingRight: 100, paddingTop: 20 }}
-              >
-                <TableInfo />
-              </div>
+              <TableInfo />
             </div>
           </div>
         </div>

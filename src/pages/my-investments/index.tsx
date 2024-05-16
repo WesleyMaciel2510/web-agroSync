@@ -5,6 +5,7 @@ import InvestmentLineChart from "../../components/charts/lineChart";
 import StatsAndImage from "../../components/stats/statsAndImage";
 import Layout from "../../components/layout";
 import "./styles.css";
+import AccountStatusCard from "../../components/cards/accountStatusCard";
 
 const MyInvestmentsPage = () => {
   return (
@@ -160,6 +161,14 @@ const MyInvestmentsPage = () => {
                 </div>
               }
             />
+          </div>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <div className={"p-10"} style={{ flex: 1 }}>
+              <AccountStatusCard index={0} />
+            </div>
+            <div className={"p-10"} style={{ flex: 1 }}>
+              <AccountStatusCard index={1} />
+            </div>
           </div>
         </div>
       </Layout>

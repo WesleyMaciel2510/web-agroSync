@@ -60,7 +60,7 @@ const LoginPage = () => {
             }}
           >
             <h1 className="text-2xl font-bold text-center mb-4 text-white">
-              Welcome Back!
+              Bem Vindo de Volta!
             </h1>
             <div className="mb-4">
               <label
@@ -105,7 +105,7 @@ const LoginPage = () => {
                 <input
                   type="password"
                   className="grow"
-                  placeholder="Password"
+                  placeholder="Senha"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
@@ -122,7 +122,7 @@ const LoginPage = () => {
                 }
                 to={"/sign-up"}
               >
-                Sign Up
+                Inscrever-se
               </Link>
               <Link
                 style={{ textAlign: "right", cursor: "pointer" }}
@@ -134,7 +134,7 @@ const LoginPage = () => {
                 }
                 to={"/forgot-password"}
               >
-                Forgot My Password
+                Esqueci Minha Senha
               </Link>
             </div>
 

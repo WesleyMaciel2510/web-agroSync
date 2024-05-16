@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSharedState } from "@/global/sharedStates";
+import { useSharedState } from "../../global/sharedStates";
 
 interface HomeCardProps {
   index: number;
@@ -44,33 +44,33 @@ const HomeCard: React.FC<HomeCardProps> = ({ index }) => {
         style={{ borderWidth: 2, borderColor: "gray", borderRadius: 17 }}
       >
         <div className="stat">
-          <div className="stat-title text-white mb-3">Account Income</div>
-          <div className="stat-value">${accounts[index].income}</div>
+          <div className="stat-title text-white mb-3">Receita da Conta</div>
+          <div className="stat-value">R${accounts[index].income}</div>
           <div className="stat-actions">
             <button
               //onClick={() => handleButtonModalClick('details')}
               className="btn btn-sm btn-success"
             >
-              Details
+              Detalhes
             </button>
           </div>
         </div>
 
         <div className="stat">
-          <div className="stat-title text-white mb-3">Account Outcome</div>
-          <div className="stat-value">${accounts[index].withdraw}</div>
+          <div className="stat-title text-white mb-3">Despesa da Conta</div>
+          <div className="stat-value">R${accounts[index].withdraw}</div>
           <div className="stat-actions">
             <button
               //onClick={() => handleButtonModalClick('deposit')}
               className="btn btn-sm btn-success mr-2"
             >
-              Deposit
+              Depositar
             </button>
             <button
               //onClick={() => handleButtonModalClick('withdraw')}
               className="btn btn-sm btn-success"
             >
-              Withdraw
+              Sacar
             </button>
           </div>
         </div>
@@ -88,15 +88,15 @@ const HomeCard: React.FC<HomeCardProps> = ({ index }) => {
         >
           <h3 className="font-bold text-lg text-primary">
             {actionType === "withdraw"
-              ? "Withdraw funds from your account"
-              : "Add funds to your account"}
+              ? "Retirar fundos da sua conta"
+              : "Adicionar fundos à sua conta"}
           </h3>
           <p className="py-4">
-            Please Select the amount and click in Add Funds.
+            Por favor, selecione o valor e clique em Adicionar Fundos.
           </p>
           <input
             type="text"
-            placeholder="Digite Aqui"
+            placeholder="Digite aqui"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             className="input input-bordered input-primary w-1/2 max-w-xs mr-3"
@@ -105,12 +105,12 @@ const HomeCard: React.FC<HomeCardProps> = ({ index }) => {
             className="btn bg-primary text-white"
             //onClick={() => changeFunds(actionType)}
           >
-            {actionType === "withdraw" ? "Withdraw Funds" : "Add Funds"}
+            {actionType === "withdraw" ? "Retirar Fundos" : "Adicionar Fundos"}
           </button>
 
           <div className="modal-action">
             <form method="dialog">
-              <button className="btn">Close</button>
+              <button className="btn">Fechar</button>
             </form>
           </div>
         </div>

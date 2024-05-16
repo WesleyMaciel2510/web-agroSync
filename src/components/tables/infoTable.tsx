@@ -52,7 +52,7 @@ const TableInfo = () => {
   };
   //==========================================================
   return (
-    <div>
+    <div style={{ paddingLeft: 100, paddingRight: 100 }}>
       <div
         style={{
           display: "flex",
