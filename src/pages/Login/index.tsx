@@ -4,9 +4,12 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { setIsLogged } from "../../redux/actions";
 import { useDispatch } from "react-redux";
+import { setLogin } from "../../services/user/login";
+import { useSharedState } from "./logic";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
+  const { isLoading, setIsLoading } = useSharedState();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,20 +24,20 @@ const LoginPage = () => {
       alert("Please fill in both username and password.");
       return;
     } else {
-      console.log("@ CREDENCIAIS VALIDAS @");
-      console.log("entrou no else");
-      dispatch(setIsLogged(true));
-
-      navigate("/home");
-      /* onst result = await setLogin(email, password);
+      setIsLoading(true);
+      const result = await setLogin(email, password);
       console.log("@@@@ result", result);
       if (result) {
-        alert("Login Realizado."), router.push("/home");
+        alert("Login Realizado.");
+        setIsLoading(false);
+        navigate("/home"), console.log("@ CREDENCIAIS VALIDAS @");
+        console.log("entrou no else");
+        dispatch(setIsLogged(true));
       } else {
         alert(
           `Erro no Login!\n Verifique as credenciais inseridas ou redefina sua senha.`
         );
-      } */
+      }
     }
   };
 
@@ -139,20 +142,24 @@ const LoginPage = () => {
             </div>
 
             <div className="flex justify-center" style={{ marginTop: 20 }}>
-              <button
-                type="submit"
-                className={
-                  "w-1/2 inline-flex items-center px-4 py-2 bg-primary text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-opacity-50"
-                }
-                style={{
-                  justifyContent: "center",
-                  backgroundColor: "white",
-                  color: "black",
-                  transition: "transform 0.3s ease",
-                }}
-              >
-                Login
-              </button>
+              {isLoading ? (
+                <div></div>
+              ) : (
+                <button
+                  type="submit"
+                  className={
+                    "w-1/2 inline-flex items-center px-4 py-2 bg-primary text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:ring-opacity-50"
+                  }
+                  style={{
+                    justifyContent: "center",
+                    backgroundColor: "white",
+                    color: "black",
+                    transition: "transform 0.3s ease",
+                  }}
+                >
+                  Login
+                </button>
+              )}
             </div>
           </form>
         </div>
