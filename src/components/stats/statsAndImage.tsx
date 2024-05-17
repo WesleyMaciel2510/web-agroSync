@@ -4,7 +4,7 @@ const StatsAndImage = () => {
   return (
     <div
       className="stats shadow"
-      style={{ minWidth: "150vh", paddingBottom: 10, marginRight: 50 }}
+      style={{ minWidth: "150vh", paddingBottom: 10, marginRight: 125 }}
     >
       <div className="stat">
         <div className="stat-figure text-primary">
@@ -22,7 +22,7 @@ const StatsAndImage = () => {
             ></path>
           </svg>
         </div>
-        <div className="stat-title">Investimentos Totais</div>
+        <div className="stat-title">Total de Investimentos </div>
         <div className="stat-value text-primary">25,6K</div>
         <div className="stat-desc">21% a mais que o mês passado</div>
       </div>
@@ -43,7 +43,7 @@ const StatsAndImage = () => {
             ></path>
           </svg>
         </div>
-        <div className="stat-title">ROI</div>
+        <div className="stat-title">Retorno do Investimento</div>
         <div className="stat-value text-secondary">2,6%</div>
         <div className="stat-desc">21% a mais que o mês passado</div>
       </div>

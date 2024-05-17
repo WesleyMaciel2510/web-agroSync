@@ -1,4 +1,3 @@
-import React from "react";
 import IconAndLabel from "../../Buttons/iconAndLabel";
 import {
   faHouse,
@@ -8,6 +7,8 @@ import {
   faLock,
   faRightFromBracket,
   faUser,
+  faLeaf,
+  faCog,
 } from "@fortawesome/free-solid-svg-icons";
 import { setIsLogged } from "../../../redux/actions";
 import "./leftBar.css";
@@ -25,22 +26,27 @@ const LeftBar = () => {
   };
   return (
     <div
-      className="leftBar "
+      className="leftBar"
       style={{
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
-        height: "100%",
+        height: "100vh",
         overflowY: "auto",
+        position: "fixed",
+        width: "210px",
       }}
     >
+      <IconAndLabel icon={faLeaf} label={"AgroSync"} />
       <div className="doubleBorder" />
+
       <div>
         <IconAndLabel
           icon={faHouse}
           label={"Página Inicial"}
           navigateTo={"/home"}
         />
+        <IconAndLabel icon={faCog} label={"Features"} navigateTo={"/feature"} />
         <IconAndLabel
           icon={faChartSimple}
           label={"Analytics"}
@@ -66,7 +72,7 @@ const LeftBar = () => {
         <IconAndLabel icon={faUser} label={"Perfil"} navigateTo={"/profile"} />
         <IconAndLabel
           icon={faLock}
-          label={"Alterar\n Senha"}
+          label={"Alterar Senha"}
           navigateTo={"/forgot-password"}
         />
         <div style={{ position: "fixed", bottom: 0, width: "210px" }}>

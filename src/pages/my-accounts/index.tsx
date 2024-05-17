@@ -95,10 +95,6 @@ const AccountPage = () => {
             flexDirection: "column",
           }}
         >
-          <div style={{ alignSelf: "center", paddingTop: 20 }}>
-            <InfoText />
-          </div>
-
           <div className="drawer-content flex flex-col items-center justify-center primary">
             <div
               style={{

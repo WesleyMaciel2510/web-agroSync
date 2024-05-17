@@ -1,14 +1,12 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons/faLeaf";
-import "./navbar.css";
 import IconAndLabel from "../Buttons/iconAndLabel";
+import "./navbar.css";
 
 const NavBar = () => {
   return (
-    <div className="navbar color">
-      <div className="flex-1">
-        <IconAndLabel icon={faLeaf} label={"AgroSync"} navigateTo={"/"} />
-      </div>
+    <div className="navbar color" style={{ width: "100%" }}>
+      <div className="flex-1"></div>
       <div className="flex-none gap-2">
         <div className="form-control">
           <input

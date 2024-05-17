@@ -1,5 +1,4 @@
-import React, { ReactNode } from "react";
-import NavBar from "./NavBar/navbar";
+import { ReactNode } from "react";
 import LeftBar from "./Bars/LeftBar/leftbar";
 
 interface LayoutProps {
@@ -8,11 +7,17 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-      <NavBar />
-      <div style={{ display: "flex", flex: 1 }}>
-        <LeftBar />
-        <div style={{ flex: 5, display: "flex", flexDirection: "column" }}>
+    <div style={{ display: "flex" }}>
+      <LeftBar />
+      <div
+        style={{
+          marginLeft: "210px",
+          display: "flex",
+          flexDirection: "column",
+          flex: 1,
+        }}
+      >
+        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
           {children}
         </div>
       </div>
