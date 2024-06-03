@@ -15,3 +15,12 @@
   margin: 10px;
   flex-grow: 1;
 }
+
+.picture-board {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border-color: #3ac0a0;
+  border-width: 3px;
+  border-style: solid;
+}

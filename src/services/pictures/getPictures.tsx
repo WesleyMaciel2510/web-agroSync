@@ -6,6 +6,9 @@ export const getPictures = async (
   INDEX: number
 ) => {
   console.log("chamou getPictures");
+
+  console.log("getPictures GOT = ", INDEX);
+
   try {
     console.log("entrou no try");
     console.log("serverURL = ", serverURL);
@@ -16,14 +19,11 @@ export const getPictures = async (
         params: { IDTYPE, INDEX },
       }
     );
-    console.log("response= ", response);
+    console.log(INDEX, ") Response = ", response);
 
-    /* if (response.data) { */
     console.log("Picture Data Received in getPictures = ", response.data);
     return { success: true, data: response.data };
-    /* } else {
-      return { success: false, data: [] };
-    } */
+    return { success: false, data: [] };
   } catch (error) {
     console.error("Unknown error occurred:", error);
   }
