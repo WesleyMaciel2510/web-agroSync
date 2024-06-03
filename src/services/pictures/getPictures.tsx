@@ -1,14 +1,20 @@
 import axios from "axios";
 import { serverURL } from "../../.env";
 
-export const getPictures = async () => {
+export const getPictures = async (
+  IDTYPE: "LOADID" | "SCHEDULINGID",
+  INDEX: number
+) => {
   console.log("chamou getPictures");
   try {
     console.log("entrou no try");
     console.log("serverURL = ", serverURL);
 
     const response = await axios.get(
-      `${serverURL}/api/webPictures/get-pictures`
+      `${serverURL}/api/webPictures/get-pictures`,
+      {
+        params: { IDTYPE, INDEX },
+      }
     );
     console.log("response= ", response);
 
