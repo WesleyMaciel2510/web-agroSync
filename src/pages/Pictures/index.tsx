@@ -1,41 +1,41 @@
 import Layout from "../../components/layout";
-import profileImage from "../../assets/profile.jpg";
-import { useEffect, useState } from "react";
-import { getPictures } from "../../services/pictures";
+import { searchPicture } from "../../services/pictures/searchPicture";
+import { useSharedState, useInit } from "./logic";
+//import profileImage from "../../assets/profile.jpg";
 
 const Pictures = () => {
-  const [hasImg, setHasImg] = useState<boolean[]>([]);
-  const [img, setImg] = useState<string[]>([]);
-  const IDTYPE = "SCHEDULINGID";
-  //const IDTYPE = "LOADID";
-  const amountOfPictures = 6;
+  const { hasImg, img, searchValue, setSearchValue } = useSharedState();
+  useInit();
 
-  useEffect(() => {
-    const LoadImage = async () => {
-      for (let i = 0; i < amountOfPictures; i++) {
-        const result = await getPictures(IDTYPE, i);
-        if (result?.success) {
-          console.log(
-            "result in Pictures Page  = ",
-            typeof result.data.IMGBASE64
-          );
-          setHasImg((prevHasImg) => [...prevHasImg, true]);
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    setSearchValue(inputValue);
+    //console.log("Typed number:", inputValue);
+  };
 
-          if (typeof result.data.IMGBASE64 === "string") {
-            setImg((prevImg) => [...prevImg, result.data.IMGBASE64]);
-          } else {
-            console.log("ImageBase64 AMOUNT = ", result.data.IMGBASE64.length);
-            setImg((prevImg) => [...prevImg, result.data.IMGBASE64[0]]);
-          }
-        } else {
-          setHasImg((prevHasImg) => [...prevHasImg, false]);
-          setImg((prevImg) => [...prevImg, ""]);
-        }
+  const handleSearch = async () => {
+    console.log("Typed value:", searchValue);
+    console.log("Type of searchValue:", typeof searchValue);
+    const searchValueNumber = Number(searchValue);
+    console.log("Converted value:", searchValueNumber);
+    console.log("Type of converted value:", typeof searchValueNumber);
+
+    if (isNaN(searchValueNumber)) {
+      alert("Digite apenas números para pesquisar sua foto.");
+    } else {
+      console.log("pesquisar");
+
+      const IDTYPE = "SCHEDULINGID";
+      //const IDTYPE = "LOADID";
+      const result = await searchPicture(IDTYPE, searchValueNumber);
+      console.log(" result = ", result);
+      if (result?.success) {
+        console.log("PICTURES RESULT = ", result?.data.length);
+      } else {
+        alert("Não foi encontrado nenhuma foto com o ID digitado.");
       }
-    };
-
-    LoadImage();
-  }, []);
+    }
+  };
 
   // GRID =======================================================================
   const renderGrid = () => {
@@ -105,12 +105,17 @@ const Pictures = () => {
                       type="text"
                       className="grow"
                       placeholder="Pesquisa"
+                      value={searchValue}
+                      onChange={handleInputChange}
+                      pattern="\d*" // Allow only digits
                     />
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 16 16"
                       fill="currentColor"
-                      className="w-4 h-4 opacity-70"
+                      className="w-7 h-7 opacity-70"
+                      onClick={() => handleSearch()}
+                      style={{ cursor: "pointer" }}
                     >
                       <path
                         fillRule="evenodd"

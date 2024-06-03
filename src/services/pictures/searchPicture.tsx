@@ -1,28 +1,26 @@
 import axios from "axios";
 import { serverURL } from "../../.env";
 
-export const getPictures = async (
+export const searchPicture = async (
   IDTYPE: "LOADID" | "SCHEDULINGID",
-  INDEX: number
+  ID: number
 ) => {
-  console.log("chamou getPictures");
-
-  console.log("getPictures GOT = ", INDEX);
+  console.log("chamou searchPicture");
+  console.log("searchPicture GOT = ", ID);
 
   try {
     console.log("entrou no try");
-    console.log("serverURL = ", serverURL);
 
     const response = await axios.get(
-      `${serverURL}/api/webPictures/get-pictures`,
+      `${serverURL}/api/webPictures/search-pictures`,
       {
-        params: { IDTYPE, INDEX },
+        params: { IDTYPE, ID },
       }
     );
-    console.log(INDEX, ") Response = ", response);
+    console.log("Response = ", response);
 
     console.log("Picture Data Received in getPictures = ", response.data);
-    return response.data;
+    return { success: true, data: response.data };
   } catch (error) {
     console.error("Unknown error occurred:", error);
   }
