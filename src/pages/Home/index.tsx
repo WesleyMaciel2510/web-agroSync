@@ -1,17 +1,6 @@
 import Layout from "../../components/layout";
-import InfoText from "../../components/Bars/InfoTextBar/infoTextBar";
-//import Lottie from "react-lottie";
 
 const Home = () => {
-  /* const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: require("../../assets/home.json"),
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  }; */
-
   return (
     <div>
       <Layout>
@@ -120,9 +109,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div style={{ alignSelf: "center", paddingTop: 20 }}>
-                <InfoText />
-              </div>
+              <div style={{ alignSelf: "center", paddingTop: 20 }}></div>
             </div>
           </div>
         </div>

@@ -9,6 +9,7 @@ import {
   faUser,
   faLeaf,
   faCog,
+  faDesktop,
 } from "@fortawesome/free-solid-svg-icons";
 import { setIsLogged } from "../../../redux/actions";
 import "./leftBar.css";
@@ -45,6 +46,11 @@ const LeftBar = () => {
           icon={faHouse}
           label={"Página Inicial"}
           navigateTo={"/home"}
+        />
+        <IconAndLabel
+          icon={faDesktop}
+          label={"Monitoramento"}
+          navigateTo={"/pictures"}
         />
         <IconAndLabel icon={faCog} label={"Features"} navigateTo={"/feature"} />
         <IconAndLabel

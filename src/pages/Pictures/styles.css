@@ -1,0 +1,17 @@
+.container {
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.child {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 10px;
+  flex-grow: 1;
+}

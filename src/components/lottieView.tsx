@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import Lottie from "react-lottie";
 
 interface Props {
@@ -35,3 +35,4 @@ const LottieView: React.FC<Props> = ({
 };
 
 export default LottieView;
+ */
