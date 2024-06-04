@@ -25,5 +25,6 @@ export const getPictures = async (
     return response.data;
   } catch (error) {
     console.error("Unknown error occurred:", error);
+    return error;
   }
 };

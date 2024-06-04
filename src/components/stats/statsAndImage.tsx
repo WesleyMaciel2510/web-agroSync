@@ -49,13 +49,7 @@ const StatsAndImage = () => {
       </div>
 
       <div className="stat">
-        <div className="stat-figure text-secondary">
-          <div className="avatar online">
-            <div className="w-16 rounded-full">
-              <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-            </div>
-          </div>
-        </div>
+        <div className="stat-figure text-secondary"></div>
         <div className="stat-value">86%</div>
         <div className="stat-title">Metas de Investimento Alcançadas</div>
         <div className="stat-desc text-secondary">3 metas restantes</div>

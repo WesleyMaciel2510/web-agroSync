@@ -1,38 +1,34 @@
-/* import React from "react";
-import Lottie from "react-lottie";
+import React from "react";
+import Lottie from "lottie-react";
+//import animationData from "../assets/Animations/home.json";
 
 interface Props {
-  animationData?: string;
+  animationData: object | null;
   loopingActive: boolean;
-  width?: number; //?: to make it optional
-  height?: number; //?: to make it optional
+  width?: number;
+  height?: number;
 }
 
 const LottieView: React.FC<Props> = ({
   animationData,
-  loopingActive,
+  //loopingActive,
   height,
   width,
 }) => {
-  const defaultOptions = {
-    loop: loopingActive,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
+  const rendererSettings = {
+    preserveAspectRatio: "xMidYMid slice",
   };
 
   return (
-    <div>
+    <div style={{ height: height || 200, width: width || 200 }}>
       <Lottie
-        options={defaultOptions}
-        height={height ? height : 400}
-        width={width ? width : 400}
+        animationData={animationData}
+        loop={false}
+        //autoplay={true}
+        rendererSettings={rendererSettings}
       />
     </div>
   );
 };
 
 export default LottieView;
- */

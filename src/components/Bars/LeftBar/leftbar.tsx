@@ -75,12 +75,8 @@ const LeftBar = () => {
             borderBottomColor: "white",
           }}
         />
-        <IconAndLabel icon={faUser} label={"Perfil"} navigateTo={"/profile"} />
-        <IconAndLabel
-          icon={faLock}
-          label={"Alterar Senha"}
-          navigateTo={"/forgot-password"}
-        />
+        <IconAndLabel icon={faUser} label={"Perfil"} navigateTo={"/"} />
+        <IconAndLabel icon={faLock} label={"Alterar Senha"} navigateTo={"/"} />
         <div style={{ position: "fixed", bottom: 0, width: "210px" }}>
           <IconAndLabel
             icon={faRightFromBracket}

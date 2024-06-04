@@ -9,7 +9,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { SetStateAction, useState } from "react";
 import Layout from "../../components/layout";
-import InfoText from "../../components/Bars/InfoTextBar/infoTextBar";
 
 const AccountPage = () => {
   const { accounts, setAccounts } = useSharedState();

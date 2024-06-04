@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLeaf } from "@fortawesome/free-solid-svg-icons/faLeaf";
-import IconAndLabel from "../Buttons/iconAndLabel";
 import "./navbar.css";
 
 const NavBar = () => {
@@ -20,14 +17,7 @@ const NavBar = () => {
             tabIndex={0}
             role="button"
             className="btn btn-ghost btn-circle avatar online"
-          >
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
-            </div>
-          </div>
+          ></div>
           <ul
             tabIndex={0}
             className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"

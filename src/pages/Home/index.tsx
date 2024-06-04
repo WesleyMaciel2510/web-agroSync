@@ -1,6 +1,18 @@
 import Layout from "../../components/layout";
+import LottieView from "../../components/lottieView";
+//import { useInit, useSharedState } from "./logic";
+import { useSharedState as useSharedLoginState } from "../Login/logic";
+import register from "../../assets/Animations/register.json";
+import driver1 from "../../assets/driver1.gif";
+import driver2 from "../../assets/driver2.gif";
+import driver3 from "../../assets/driver3.gif";
+import driver4 from "../../assets/driver4.gif";
+import "./styles.css";
 
 const Home = () => {
+  //const {} = useSharedState();
+  const { userType, setUserType } = useSharedLoginState();
+  //useInit();
   return (
     <div>
       <Layout>
@@ -61,17 +73,18 @@ const Home = () => {
                   </svg>
                 </div>
                 {/* Section header */}
-                <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
+                <LottieView loopingActive={true} animationData={register} />
+                <div className="max-w-2xl mx-auto text-center pb-12 md:pb-12">
                   <h1 className="h1 mb-4" data-aos="fade-up">
-                    Hello, user!
+                    Olá, Monitor!
                   </h1>
                   <p
-                    className="text-xl text-gray-400 mb-8"
+                    className="text-xl text-gray-400 mb-8 mr-10"
                     data-aos="fade-up"
                     data-aos-delay="200"
                   >
-                    Our landing page template works on all devices, so you only
-                    have to set it up once, and get beautiful results forever.
+                    Aqui você pode monitorar todas as ETAPAS do processo de
+                    entrega.
                   </p>
                   <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
                     <div data-aos="fade-up" data-aos-delay="400">
@@ -79,7 +92,7 @@ const Home = () => {
                         className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0"
                         href="#0"
                       >
-                        Start free trial
+                        Consultar Carga
                       </a>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="600">
@@ -87,7 +100,7 @@ const Home = () => {
                         className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4"
                         href="#0"
                       >
-                        Learn more
+                        Saiba Mais
                       </a>
                     </div>
                   </div>
@@ -96,20 +109,62 @@ const Home = () => {
                   className="stats stats-vertical shadow"
                   style={{ alignSelf: "flex-start" }}
                 >
+                  <h2 className="container"> Registro Diário:</h2>
                   <div className="stat">
-                    <div className="stat-title">New Users</div>
-                    <div className="stat-value">4,200</div>
-                    <div className="stat-desc">↗︎ 400 (22%)</div>
+                    <h2 className="stat-title">Cargas Ativas</h2>
+                    <div className="stat-value">1279</div>
+                    <div className="stat-desc">↗︎ 147 (22%)</div>
                   </div>
 
                   <div className="stat">
-                    <div className="stat-title">New Registers</div>
-                    <div className="stat-value">1,200</div>
-                    <div className="stat-desc">↘︎ 90 (14%)</div>
+                    <h2 className="stat-title">Cargas Entregues</h2>
+                    <div className="stat-value">1,4530</div>
+                    <div className="stat-desc">↘︎ 12 (6%)</div>
                   </div>
                 </div>
               </div>
-              <div style={{ alignSelf: "center", paddingTop: 20 }}></div>
+              <div
+                style={{
+                  alignSelf: "center",
+                  paddingTop: 20,
+                  marginRight: 25,
+                  display: "flex",
+                  flexDirection: "row",
+                }}
+              >
+                <div>
+                  <h1>
+                    Etapas do{" "}
+                    {userType == "DRIVER" ? " Rastreamento " : "Agendamento"}
+                  </h1>
+                </div>
+                <div>
+                  <img className="mask mask-parallelogram-2" src={driver1} />
+                  <h2 style={{ textAlign: "center", color: "#3ac0a0" }}>
+                    COLETA
+                  </h2>
+                </div>
+                <div>
+                  <img className="mask mask-parallelogram-2" src={driver2} />
+                  <h2 style={{ textAlign: "center", color: "#3ac0a0" }}>
+                    VIAGEM
+                  </h2>
+                </div>
+                <div>
+                  <img className="mask mask-parallelogram-2" src={driver3} />
+
+                  <h2 style={{ textAlign: "center", color: "#3ac0a0" }}>
+                    REGISTRO
+                  </h2>
+                </div>
+                <div>
+                  <img className="mask mask-parallelogram-2" src={driver4} />
+
+                  <h2 style={{ textAlign: "center", color: "#3ac0a0" }}>
+                    ENTREGA
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
         </div>

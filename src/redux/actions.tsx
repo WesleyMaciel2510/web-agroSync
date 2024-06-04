@@ -19,3 +19,8 @@ export const setToken = (token: boolean) => ({
   type: ACTION.SET_TOKEN,
   payload: token,
 });
+
+export const setPicturesLoaded = (picturesLoaded: boolean) => ({
+  type: ACTION.SET_PICTURES_LOADED,
+  payload: picturesLoaded,
+});

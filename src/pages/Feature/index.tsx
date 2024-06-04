@@ -5,14 +5,14 @@ const Feature = () => {
     <main>
       <Layout>
         <section>
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="py-5 md:py-20 border-t border-gray-800">
+          <div className="max-w-6xl mx-auto px-2 sm:px-3">
+            <div className="py-5 md:py-10 border-t border-gray-400">
               {/* Section header */}
               <div className="max-w-3xl mx-auto text-center pb-5 md:pb-20">
                 <p className="text-xl text-gray-400">
-                  Vitae aliquet nec ullamcorper sit amet risus nullam eget felis
-                  semper quis lectus nulla at volutpat diam ut venenatis
-                  tellus—in ornare.
+                  A gestão eficiente do fluxo de mercadorias, desde o ponto de
+                  origem até o ponto de consumo, é crucial para nossas operações
+                  logísticas
                 </p>
               </div>
 
@@ -35,10 +35,9 @@ const Feature = () => {
                     </div>
                   </div>
                   <blockquote className="text-lg text-gray-400 grow">
-                    — Open PRO lets me quickly get the insights I care about so
-                    that I can focus on my productive work. I've had Open PRO
-                    for about 24 hours now and I honestly don't know how I
-                    functioned without it before.
+                    — Nosso objetivo é garantir que as mercadorias sejam
+                    entregues da maneira mais econômica e oportuna, contribuindo
+                    para a satisfação do cliente e o crescimento dos negócios.
                   </blockquote>
                   <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700">
                     <cite className="text-gray-200 not-italic">
@@ -72,10 +71,10 @@ const Feature = () => {
                     </div>
                   </div>
                   <blockquote className="text-lg text-gray-400 grow">
-                    — Open PRO lets me quickly get the insights I care about so
-                    that I can focus on my productive work. I've had Open PRO
-                    for about 24 hours now and I honestly don't know how I
-                    functioned without it before.
+                    — Nossa equipe dedicada garante o transporte e armazenamento
+                    perfeitos de mercadorias. Nos esforçamos pela excelência em
+                    cada etapa de nossa cadeia de suprimentos, desde a gestão de
+                    estoque até a realização de pedidos.
                   </blockquote>
                   <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700">
                     <cite className="text-gray-200 not-italic">
@@ -109,10 +108,9 @@ const Feature = () => {
                     </div>
                   </div>
                   <blockquote className="text-lg text-gray-400 grow">
-                    — Open PRO lets me quickly get the insights I care about so
-                    that I can focus on my productive work. I've had Open PRO
-                    for about 24 hours now and I honestly don't know how I
-                    functioned without it before.
+                    — Com foco no futuro, estamos desenvolvendo processos de
+                    entrega inteligentes que prometem transformar a maneira como
+                    o mundo percebe o transporte e a entrega de mercadorias.
                   </blockquote>
                   <div className="text-gray-700 font-medium mt-6 pt-5 border-t border-gray-700">
                     <cite className="text-gray-200 not-italic">

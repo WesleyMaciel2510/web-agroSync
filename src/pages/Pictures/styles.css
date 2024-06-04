@@ -24,3 +24,7 @@
   border-width: 3px;
   border-style: solid;
 }
+
+.text-white {
+  color: "#fff";
+}

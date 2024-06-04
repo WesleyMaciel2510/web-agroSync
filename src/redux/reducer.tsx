@@ -6,6 +6,7 @@ const initialState: RootState = {
   isLogged: false,
   userType: "",
   token: "",
+  picturesLoaded: false,
 };
 
 const reducer = (
@@ -34,6 +35,11 @@ const reducer = (
       return {
         ...state,
         token: action.payload,
+      };
+    case ACTION.SET_PICTURES_LOADED:
+      return {
+        ...state,
+        picturesLoaded: action.payload,
       };
     default:
       return state;
